@@ -8,8 +8,6 @@ from .aria2c import Aria2c
 from .settings import Settings
 from .secret import team_city_user
 
-__all__ = ['main']
-
 
 @click.command()
 @click.argument('url', nargs=1, type=click.STRING)

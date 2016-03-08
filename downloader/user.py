@@ -1,8 +1,10 @@
+"""Module for user handling"""
 
 __all__ = ['User']
 
 
 class User(object):
+    """Class for user credentials"""
     def __init__(self, username=None, password=None):
         self._username = username
         self._password = password

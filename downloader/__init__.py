@@ -2,7 +2,6 @@
 
 """
 
-from . import aria2c, settings
-from .__main__ import main
+from . import aria2c, settings, user
 
-__all__ = ['aria2c', 'settings', 'main']
+__all__ = ['aria2c', 'settings', 'user']
