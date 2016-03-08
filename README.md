@@ -6,7 +6,7 @@
 
 2. Clone the repo:
 
-        git clone https://github.com/Sgiath/downloader.git && cd downloader
+        $ git clone https://github.com/Sgiath/downloader.git && cd downloader
 
 3. Create file ```downloader/secret.py``` with this content:
 
@@ -16,10 +16,10 @@
 
 4. Install the program:
 
-        pip install .
+        $ pip install .
 
 ## Usage
 
 Run:
 
-    download URL
+    $ download URL
