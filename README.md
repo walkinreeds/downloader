@@ -2,14 +2,18 @@
 
 ## Config
 
-Create file ```downloader/secret.py``` with this content:
+1. Install aria2c
 
-    from .settings import User
+2. Create file ```downloader/secret.py``` with this content:
 
+        from .user import User
 
-    class TeamCityUser(User):
-        username = 'your.username'
-        password = 'your_password'
+        team_city_user = User(username='your.name', password='your_pass')
+
+3. Install requirements:
+
+        pip install -r requirements.txt
+
 
 ## Usage
 

@@ -2,14 +2,9 @@
 
 import os
 
-from .secret import TeamCityUser
+from .secret import team_city_user
 
-__all__ = ['Default', 'Recommended', ]
-
-
-class User(object):
-    username = str()
-    password = str()
+__all__ = ['Default', 'Recommended', 'TeamCitySencha']
 
 
 class Default(object):
@@ -54,5 +49,5 @@ class Recommended(Default):
 
 
 class TeamCitySencha(Recommended):
-    http_user = TeamCityUser.username
-    http_passwd = TeamCityUser.password
+    http_user = team_city_user.username
+    http_passwd = team_city_user.password
