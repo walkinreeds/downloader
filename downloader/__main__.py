@@ -5,7 +5,8 @@ import sys
 import click
 
 from .aria2c import Aria2c
-from .settings import TeamCitySencha
+from .settings import Settings
+from .secret import team_city_user
 
 __all__ = ['main']
 
@@ -18,8 +19,15 @@ def main(url):
     Arguments:
         url (str): Download URL
     """
+    settings = Settings('recommended')
+
+    if url.startswith('https://'):
+        if url[8:].startswith('teamcity.sencha.com/'):
+            settings.http_user = team_city_user.username
+            settings.http_passwd = team_city_user.password
+
     downloader = Aria2c()
-    downloader.use_settings(TeamCitySencha())
+    downloader.use_settings(settings)
     downloader.uri = url
     downloader.run()
 

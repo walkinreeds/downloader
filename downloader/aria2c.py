@@ -3,7 +3,7 @@
 import subprocess
 import os
 
-from .settings import Default
+from .settings import Settings
 
 __all__ = ['Aria2c']
 
@@ -12,7 +12,7 @@ class Aria2c(object):
     COMMAND = 'aria2c'
 
     def __init__(self):
-        self._default_settings = Default()
+        self._default_settings = Settings()
         self._using_settings = self._default_settings
         self._log = None
         self._dir = None
